@@ -6,6 +6,10 @@ var search = function(nums, target) {
         var mid = Math.floor((start + end) / 2);
         if (nums[mid] === target) {
             return mid;
+        } else if (nums[start] === target) {
+            return start;
+        } else if (nums[end] === target) {
+            return end;
         } else if (nums[mid] < target) {
             start = mid + 1;
         } else {
